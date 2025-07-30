@@ -80,52 +80,52 @@ function About() {
             <div className="relative border-l-2 border-gray-300 pl-6">
               <div className="mb-10 relative">
                 <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-gray-500 dark:text-gray-200">
                   May 2022 – Jul 2022
                 </span>
                 <h3 className="text-lg font-semibold">
                   Foundation Diploma in Information and Communication Technology
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-200">
                   JKT Digital Institute – Learned networking, hardware,
                   software, website development and Business IT.
                 </p>
               </div>
               <div className="mb-10 relative">
                 <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-gray-500 dark:text-gray-200">
                   Nov 2023 – Jan 2024
                 </span>
                 <h3 className="text-lg font-semibold">
                   PHP + Deep Dive Laravel
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-200">
                   Creative Coder Myanmar – Learned basic to advanced PHP and
                   Laravel.
                 </p>
               </div>
               <div className="mb-10 relative">
                 <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-gray-500 dark:text-gray-200">
                   Dec 2023 – Mar 2024
                 </span>
                 <h3 className="text-lg font-semibold">
                   Professional Website Developer
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-200">
                   Fairway Technology – Learned how to create fullstack website
                   and understand the flow clearly.
                 </p>
               </div>
               <div className="mb-10 relative">
                 <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-gray-500 dark:text-gray-200">
                   Oct 2024 – Jan 2025
                 </span>
                 <h3 className="text-lg font-semibold">
                   Frontend (React) Zoom class
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-200">
                   Creative Coder Myanmar – Learned how to build a website with
                   better performance.
                 </p>

@@ -44,7 +44,7 @@ function Contact() {
                 type="text"
                 name="name"
                 placeholder="Enter your name"
-                className="mt-1 border-gray-500"
+                className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
               />
             </div>
             <div className="md:flex gap-2">
@@ -57,7 +57,7 @@ function Contact() {
                   type="text"
                   name="email"
                   placeholder="Enter your Email"
-                  className="mt-1 border-gray-500"
+                  className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
                 />
               </div>
               <div className="my-2 md:w-1/2">
@@ -69,7 +69,7 @@ function Contact() {
                   type="text"
                   name="phone"
                   placeholder="Enter your Phone"
-                  className="mt-1 border-gray-500"
+                  className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -82,10 +82,10 @@ function Contact() {
                 type="text"
                 name="message"
                 placeholder="Write Something..."
-                className="mt-1 border-gray-500"
+                className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
               ></Textarea>
             </div>
-            <Button className="w-full my-4 bg-[#392E16] hover:bg-[#211a09] duration-300">
+            <Button className="w-full my-4 bg-[#392E16] dark:bg-gray-50 dark:hover:bg-gray-200 hover:bg-[#211a09] duration-300">
               Submit
             </Button>
           </form>

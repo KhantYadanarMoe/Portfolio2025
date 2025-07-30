@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="px-4 md:px-8 py-4">
       <div className="flex items-center">
-        <hr className="flex-grow border-t border-gray-800 lg:ml-32 md:ml-20" />
-        <ul className="flex gap-3 md:gap-6 px-4 text-black">
+        <hr className="flex-grow border-t border-gray-800 dark:border-gray-200 lg:ml-32 md:ml-20" />
+        <ul className="flex gap-3 md:gap-6 px-4 text-black dark:text-white">
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="">Projects</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <a href="">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

@@ -8,7 +8,7 @@ function Projects() {
   return (
     <div className="w-[92%] md:w-[80%] mx-auto">
       <div>
-        <h1 className="pretty-font text-4xl text-center font-medium text-[#3A2E16]">
+        <h1 className="pretty-font text-4xl text-center font-medium text-[#3A2E16] dark:text-white">
           Khant's Works
         </h1>
         <p className="text-gray text-center mt-3">
@@ -69,21 +69,36 @@ function Projects() {
               normal e-commerce website.{" "}
             </p>
             <div className="flex gap-2 items-center mt-3">
-              <Button variant="outline" className="border border-gray-700">
+              <Button
+                variant="outline"
+                className="border border-gray-700 dark:border-gray-200"
+              >
                 <a
                   href="https://motesine.com"
                   className="flex gap-2 items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <GlobeLock /> Live Demo
                 </a>
               </Button>
-              <Button variant="outline" className="border border-gray-700">
-                <FaGithub /> Github
+              <Button
+                variant="outline"
+                className="border border-gray-700 dark:border-gray-200"
+              >
+                <a
+                  href="https://github.com/KhantYadanarMoe/MoteSine"
+                  className="flex gap-2 items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub /> Github
+                </a>
               </Button>
             </div>
           </div>
         </div>
-        <hr className="border-t-gray-400 my-6" />
+        {/* <hr className="border-t-gray-400 my-6" />
         <div className="lg:flex items-center gap-3 my-4">
           <div className="order-1 lg:order-2 lg:w-2/5">
             <img
@@ -149,7 +164,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <hr className="border-t-gray-400 my-6" />
+        <hr className="border-t-gray-400 my-6" /> */}
       </div>
     </div>
   );
