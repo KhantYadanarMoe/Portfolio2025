@@ -11,10 +11,10 @@ export default function Layout() {
   const shouldShowFooter = showFooterPaths.includes(location.pathname); //show footer when location route is same with the routes with are in showFooterPaths
 
   return (
-    <>
+    <div className="dark:bg-[#2a2a2a]">
       <Navbar />
       <Outlet />
       {shouldShowFooter && <Footer />}
-    </>
+    </div>
   );
 }

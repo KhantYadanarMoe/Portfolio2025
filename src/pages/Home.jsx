@@ -1,12 +1,13 @@
 import React from "react";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import Background from "../assets/bg.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="relative mb-6 py-6 md:py-4 lg:py-8 px-3 md:px-6 lg:px-12">
+    <div className="relative bg-white dark:bg-[#2a2a2a]">
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 dark:hidden"
         style={{
           backgroundImage: `url(${Background})`,
           backgroundSize: "cover",
@@ -15,7 +16,7 @@ function Home() {
           zIndex: -1,
         }}
       ></div>
-      <div className="md:flex items-center md:h-[70vh] px-6 md:px-12">
+      <div className="md:flex items-center md:h-[73vh] px-6 md:px-12">
         <div className="md:w-3/5 mt-8 md:mb-6 mb-8">
           <h1 className="text-3xl md:text-4xl font-medium pretty-font">
             Khant Yadanar Moe
@@ -31,57 +32,87 @@ function Home() {
             life.
           </p>
           <div className="flex gap-4 py-3">
-            <FaFacebook className="w-6 h-6 text-gray-800" />
-            <FaInstagram className="w-6 h-6 text-gray-800" />
-            <FaGithub className="w-6 h-6 text-gray-800" />
+            <a
+              href="https://www.facebook.com/share/15eQmj5Eab/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="w-6 h-6 text-gray-800 dark:text-white" />
+            </a>
+            <a
+              href="https://www.instagram.com/khant__18?igsh=NnZvOTU2bzN0aTZn&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="w-6 h-6 text-gray-800 dark:text-white" />
+            </a>
+            <a
+              href="https://github.com/KhantYadanarMoe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="w-6 h-6 text-gray-800 dark:text-white" />
+            </a>
           </div>
         </div>
         <div className="md:w-2/5 px-3 flex items-center justify-center">
           <div class="relative w-full md:w-[87%] flex flex-col justify-center gap-10">
-            <div class="flex justify-start">
-              <div
-                class="w-40 h-16 cursor-pointer select-none
+            <Link to="/about">
+              <div class="flex justify-start">
+                <div
+                  class="w-40 h-16 cursor-pointer select-none
                 active:translate-y-2 
                 active:[box-shadow:0_0px_0_0_#32281F,0_0px_0_0_#32281F] 
+                dark:active:[box-shadow:0_0px_0_0_#32281F,0_0px_0_0_#ffffff] 
                 active:border-b-[0px] 
                 transition-all duration-150 
                 [box-shadow:0_10px_0_0_#32281F,0_15px_0_0_#32281F] 
-                rounded-full border border-black 
-                flex justify-center items-center text-black font-bold text-lg bg-white"
-              >
-                About
+                dark:[box-shadow:0_10px_0_0_#ffffff,0_15px_0_0_#FFFFFF]
+                rounded-full border border-black dark:border-white
+                flex justify-center items-center text-black dark:text-white font-bold text-lg bg-white dark:bg-[#2A2A2A]"
+                >
+                  About
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div class="flex justify-end">
-              <div
-                class="w-40 h-16 cursor-pointer select-none
+            <Link to="/projects">
+              <div class="flex justify-end">
+                <div
+                  class="w-40 h-16 cursor-pointer select-none
                 active:translate-y-2 
                 active:[box-shadow:0_0px_0_0_#32281F,0_0px_0_0_#32281F] 
+                dark:active:[box-shadow:0_0px_0_0_#32281F,0_0px_0_0_#ffffff] 
                 active:border-b-[0px] 
                 transition-all duration-150 
                 [box-shadow:0_10px_0_0_#32281F,0_15px_0_0_#32281F] 
-                rounded-full border border-black 
-                flex justify-center items-center text-black font-bold text-lg bg-white"
-              >
-                Projects
+                dark:[box-shadow:0_10px_0_0_#ffffff,0_15px_0_0_#FFFFFF]
+                rounded-full border border-black dark:border-white
+                flex justify-center items-center text-black dark:text-white font-bold text-lg bg-white dark:bg-[#2A2A2A]"
+                >
+                  Projects
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div class="flex justify-start">
-              <div
-                class="w-40 h-16 cursor-pointer select-none
+            <Link to="/contact">
+              <div class="flex justify-start">
+                <div
+                  class="w-40 h-16 cursor-pointer select-none
                 active:translate-y-2 
                 active:[box-shadow:0_0px_0_0_#32281F,0_0px_0_0_#32281F] 
+                dark:active:[box-shadow:0_0px_0_0_#32281F,0_0px_0_0_#ffffff] 
                 active:border-b-[0px] 
                 transition-all duration-150 
                 [box-shadow:0_10px_0_0_#32281F,0_15px_0_0_#32281F] 
-                rounded-full border border-black 
-                flex justify-center items-center text-black font-bold text-lg bg-white"
-              >
-                Contact
+                dark:[box-shadow:0_10px_0_0_#ffffff,0_15px_0_0_#FFFFFF]
+                rounded-full border border-black dark:border-white
+                flex justify-center items-center text-black dark:text-white font-bold text-lg bg-white dark:bg-[#2A2A2A]"
+                >
+                  Contact
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@
     --radius: 0.5rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 16%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -87,6 +87,10 @@
 .resume:hover {
   --_p: 75%;
   filter: grayscale(0%);
+}
+
+.dark .resume {
+  --c: #ffffff; /* or any contrasting color */
 }
 
 .pretty-font {
