@@ -1,11 +1,24 @@
 import React from "react";
 import Khant from "../assets/Khant.jpg";
 import { Progress } from "../components/ui/progress";
+import { motion } from "framer-motion";
 
 function About() {
   return (
-    <div className="lg:flex gap-3 mt-4">
-      <div className="lg:w-4/6">
+    <motion.div
+      className="lg:flex gap-3 mt-4"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="lg:w-4/6"
+      >
         <div className="w-[87%] md:w-[80%] mx-auto">
           <h1 className="pretty-font text-3xl font-medium">Who is Khant?</h1>
           <p className="leading-relaxed mt-5">
@@ -32,110 +45,131 @@ function About() {
             and building projects that help me grow as a developer. <br />
           </p>
           <hr className="my-3 border-t-gray-400" />
-          <h1 className="pretty-font text-3xl font-medium">
-            What Khant can do?
-          </h1>
-          <div className="lg:w-[80%] mt-5">
-            <div className="mb-6">
-              <div className="flex justify-between mb-1">
-                <span>HTML, CSS</span>
-                <span>100%</span>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="pretty-font text-3xl font-medium">
+              What Khant can do?
+            </h1>
+            <div className="lg:w-[80%] mt-5">
+              <div className="mb-6">
+                <div className="flex justify-between mb-1">
+                  <span>HTML, CSS</span>
+                  <span>100%</span>
+                </div>
+                <Progress value={100} className="w-full" />
               </div>
-              <Progress value={100} className="w-full" />
-            </div>
-            <div className="mb-6">
-              <div className="flex justify-between mb-1">
-                <span>Bootstrap</span>
-                <span>80%</span>
+              <div className="mb-6">
+                <div className="flex justify-between mb-1">
+                  <span>Bootstrap</span>
+                  <span>80%</span>
+                </div>
+                <Progress value={80} className="w-full" />
               </div>
-              <Progress value={80} className="w-full" />
-            </div>
-            <div className="mb-6">
-              <div className="flex justify-between mb-1">
-                <span>Tailwind</span>
-                <span>90%</span>
+              <div className="mb-6">
+                <div className="flex justify-between mb-1">
+                  <span>Tailwind</span>
+                  <span>90%</span>
+                </div>
+                <Progress value={90} className="w-full" />
               </div>
-              <Progress value={90} className="w-full" />
-            </div>
-            <div className="mb-6">
-              <div className="flex justify-between mb-1">
-                <span>React</span>
-                <span>75%</span>
+              <div className="mb-6">
+                <div className="flex justify-between mb-1">
+                  <span>React</span>
+                  <span>75%</span>
+                </div>
+                <Progress value={75} className="w-full" />
               </div>
-              <Progress value={75} className="w-full" />
-            </div>
-            <div className="mb-6">
-              <div className="flex justify-between mb-1">
-                <span>Laravel</span>
-                <span>70%</span>
+              <div className="mb-6">
+                <div className="flex justify-between mb-1">
+                  <span>Laravel</span>
+                  <span>70%</span>
+                </div>
+                <Progress value={70} className="w-full" />
               </div>
-              <Progress value={70} className="w-full" />
             </div>
-          </div>
+          </motion.div>
           <hr className="my-3 border-t-gray-400" />
-          <h1 className="pretty-font text-3xl font-medium">
-            Education Background
-          </h1>
-          <div className="mt-6">
-            <div className="relative border-l-2 border-gray-300 pl-6">
-              <div className="mb-10 relative">
-                <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500 dark:text-gray-200">
-                  May 2022 – Jul 2022
-                </span>
-                <h3 className="text-lg font-semibold">
-                  Foundation Diploma in Information and Communication Technology
-                </h3>
-                <p className="text-gray-600 dark:text-gray-200">
-                  JKT Digital Institute – Learned networking, hardware,
-                  software, website development and Business IT.
-                </p>
-              </div>
-              <div className="mb-10 relative">
-                <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500 dark:text-gray-200">
-                  Nov 2023 – Jan 2024
-                </span>
-                <h3 className="text-lg font-semibold">
-                  PHP + Deep Dive Laravel
-                </h3>
-                <p className="text-gray-600 dark:text-gray-200">
-                  Creative Coder Myanmar – Learned basic to advanced PHP and
-                  Laravel.
-                </p>
-              </div>
-              <div className="mb-10 relative">
-                <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500 dark:text-gray-200">
-                  Dec 2023 – Mar 2024
-                </span>
-                <h3 className="text-lg font-semibold">
-                  Professional Website Developer
-                </h3>
-                <p className="text-gray-600 dark:text-gray-200">
-                  Fairway Technology – Learned how to create fullstack website
-                  and understand the flow clearly.
-                </p>
-              </div>
-              <div className="mb-10 relative">
-                <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
-                <span className="text-sm text-gray-500 dark:text-gray-200">
-                  Oct 2024 – Jan 2025
-                </span>
-                <h3 className="text-lg font-semibold">
-                  Frontend (React) Zoom class
-                </h3>
-                <p className="text-gray-600 dark:text-gray-200">
-                  Creative Coder Myanmar – Learned how to build a website with
-                  better performance.
-                </p>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="pretty-font text-3xl font-medium">
+              Education Background
+            </h1>
+            <div className="mt-6">
+              <div className="relative border-l-2 border-gray-300 pl-6">
+                <div className="mb-10 relative">
+                  <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
+                  <span className="text-sm text-gray-500 dark:text-gray-200">
+                    May 2022 – Jul 2022
+                  </span>
+                  <h3 className="text-lg font-semibold">
+                    Foundation Diploma in Information and Communication
+                    Technology
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-200">
+                    JKT Digital Institute – Learned networking, hardware,
+                    software, website development and Business IT.
+                  </p>
+                </div>
+                <div className="mb-10 relative">
+                  <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
+                  <span className="text-sm text-gray-500 dark:text-gray-200">
+                    Nov 2023 – Jan 2024
+                  </span>
+                  <h3 className="text-lg font-semibold">
+                    PHP + Deep Dive Laravel
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-200">
+                    Creative Coder Myanmar – Learned basic to advanced PHP and
+                    Laravel.
+                  </p>
+                </div>
+                <div className="mb-10 relative">
+                  <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
+                  <span className="text-sm text-gray-500 dark:text-gray-200">
+                    Dec 2023 – Mar 2024
+                  </span>
+                  <h3 className="text-lg font-semibold">
+                    Professional Website Developer
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-200">
+                    Fairway Technology – Learned how to create fullstack website
+                    and understand the flow clearly.
+                  </p>
+                </div>
+                <div className="mb-10 relative">
+                  <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
+                  <span className="text-sm text-gray-500 dark:text-gray-200">
+                    Oct 2024 – Jan 2025
+                  </span>
+                  <h3 className="text-lg font-semibold">
+                    Frontend (React) Zoom class
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-200">
+                    Creative Coder Myanmar – Learned how to build a website with
+                    better performance.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <hr className="my-3 border-t-gray-400" />
         </div>
-      </div>
-      <div className="lg:w-2/6 hidden lg:flex justify-end items-start">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="lg:w-2/6 hidden lg:flex justify-end items-start"
+      >
         <div className="sticky top-32">
           <img
             src={Khant}
@@ -143,8 +177,8 @@ function About() {
             className="w-[400px] h-[470px] object-cover"
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

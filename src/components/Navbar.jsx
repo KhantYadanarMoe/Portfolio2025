@@ -3,12 +3,18 @@ import LogoLight from "../assets/LogoLight.png";
 import LogoDark from "../assets/LogoDark.png";
 import { Moon, Sun } from "lucide-react";
 import { ThemeContext } from "@/Contexts/ThemeContext";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const logoSrc = theme === "light" ? LogoLight : LogoDark;
   return (
-    <div className="px-5 py-5 md:px-7 md:py-7 lg:px-12 lg:py-6 flex items-center justify-between sticky top-0 bg-white dark:bg-[#2a2a2a] text-black dark:text-gray-200 z-50">
+    <motion.div
+      className="px-5 py-5 md:px-7 md:py-7 lg:px-12 lg:py-6 flex items-center justify-between sticky top-0 bg-white dark:bg-[#2a2a2a] text-black dark:text-gray-200 z-50"
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <img
         src={logoSrc}
         alt=""
@@ -25,7 +31,7 @@ function Navbar() {
           </button>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
