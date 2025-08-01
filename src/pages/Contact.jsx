@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+} from "@/components/ui/alert-dialog";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -15,6 +27,37 @@ const fadeInUp = {
 };
 
 function Contact() {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true); // true for success, false for failure
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xf38tlr", // from EmailJS dashboard
+        "template_9ii4oqd", // from your EmailJS template
+        form.current,
+        {
+          publicKey: "RbfDDiAFIKx_oZD61", // from EmailJS account settings
+        }
+      )
+
+      .then(() => {
+        console.log("✅ Email sent successfully!");
+        setIsSuccess(true);
+        setDialogOpen(true);
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error("❌ Failed to send email:", error);
+        setIsSuccess(false);
+        setDialogOpen(true);
+      });
+  };
+
   return (
     <div className="md:flex gap-3 items-center px-6 md:px-12 py-4 md:py-2">
       {/* Left Text Info */}
@@ -70,7 +113,7 @@ function Contact() {
             Contact us now to build your business online.
           </motion.p>
 
-          <form action="" className="py-3">
+          <form ref={form} onSubmit={sendEmail} className="py-3">
             <motion.div
               className="my-2"
               custom={1}
@@ -160,6 +203,27 @@ function Contact() {
               </Button>
             </motion.div>
           </form>
+          <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {isSuccess
+                    ? "Your Message sent successfully!"
+                    : "Failed to send contact message!"}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {isSuccess
+                    ? "Thank you for reaching out to me! I will connect with you soon via email or phone."
+                    : "There is something wrong with your message! It failed while sending. Please try again!"}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel onClick={() => setDialogOpen(false)}>
+                  Close
+                </AlertDialogCancel>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </motion.div>
     </div>
