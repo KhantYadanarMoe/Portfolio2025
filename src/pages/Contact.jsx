@@ -28,12 +28,32 @@ const fadeInUp = {
 
 function Contact() {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true); // true for success, false for failure
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [errors, setErrors] = useState({});
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const formData = new FormData(form.current);
+    const name = formData.get("name")?.trim();
+    const email = formData.get("email")?.trim();
+    const phone = formData.get("phone")?.trim();
+    const message = formData.get("message")?.trim();
+
+    const newErrors = {};
+    if (!name) newErrors.name = "Please enter your name.";
+    if (!email) newErrors.email = "Please enter your email.";
+    if (!phone) newErrors.phone = "Please enter your phone.";
+    if (!message) newErrors.message = "Please enter a message.";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
 
     emailjs
       .sendForm(
@@ -131,6 +151,9 @@ function Contact() {
                 placeholder="Enter your name"
                 className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
               />
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+              )}
             </motion.div>
 
             <div className="md:flex gap-2">
@@ -151,6 +174,9 @@ function Contact() {
                   placeholder="Enter your Email"
                   className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
               </motion.div>
 
               <motion.div
@@ -170,6 +196,9 @@ function Contact() {
                   placeholder="Enter your Phone"
                   className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
                 />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
               </motion.div>
             </div>
 
@@ -190,6 +219,9 @@ function Contact() {
                 placeholder="Write Something..."
                 className="mt-1 bg-white text-black placeholder-gray-500 border border-gray-500 focus:border-blue-600 focus:ring-blue-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
               />
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+              )}
             </motion.div>
 
             <motion.div
