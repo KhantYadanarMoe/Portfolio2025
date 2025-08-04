@@ -2,6 +2,12 @@ import React from "react";
 import Khant from "../assets/Khant.jpg";
 import { Progress } from "../components/ui/progress";
 import { motion } from "framer-motion";
+import Diploma from "../assets/FoundationDiploma.jpg";
+import LaravelCerti from "../assets/LaravelCerti.jpg";
+import ReactCerti from "../assets/ReactCerti.jpg";
+import PWD from "../assets/PWDCerti.jpg";
+import Github from "../assets/Github.jpg";
+import { Download } from "lucide-react";
 
 function About() {
   return (
@@ -109,7 +115,7 @@ function About() {
                   <span className="text-sm text-gray-500 dark:text-gray-200">
                     May 2022 – Jul 2022
                   </span>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-base md:text-lg font-semibold">
                     Foundation Diploma in Information and Communication
                     Technology
                   </h3>
@@ -123,7 +129,7 @@ function About() {
                   <span className="text-sm text-gray-500 dark:text-gray-200">
                     Nov 2023 – Jan 2024
                   </span>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-base md:text-lg font-semibold">
                     PHP + Deep Dive Laravel
                   </h3>
                   <p className="text-gray-600 dark:text-gray-200">
@@ -136,7 +142,7 @@ function About() {
                   <span className="text-sm text-gray-500 dark:text-gray-200">
                     Dec 2023 – Mar 2024
                   </span>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-base md:text-lg font-semibold">
                     Professional Website Developer
                   </h3>
                   <p className="text-gray-600 dark:text-gray-200">
@@ -149,7 +155,7 @@ function About() {
                   <span className="text-sm text-gray-500 dark:text-gray-200">
                     Oct 2024 – Jan 2025
                   </span>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-base md:text-lg font-semibold">
                     Frontend (React) Zoom class
                   </h3>
                   <p className="text-gray-600 dark:text-gray-200">
@@ -157,10 +163,169 @@ function About() {
                     better performance.
                   </p>
                 </div>
+                <div className="mb-10 relative">
+                  <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
+                  <span className="text-sm text-gray-500 dark:text-gray-200">
+                    2022 – Present
+                  </span>
+                  <h3 className="text-base md:text-lg font-semibold">
+                    Bachelor in English Literature
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-200">
+                    Dagon University- Distance Education
+                  </p>
+                </div>
+                <div className="mb-10 relative">
+                  <div className="absolute -left-8 top-1 w-3 h-3 bg-gray-800 rounded-full border border-white"></div>
+                  <span className="text-sm text-gray-500 dark:text-gray-200">
+                    2024 – Present
+                  </span>
+                  <h3 className="text-base md:text-lg font-semibold">
+                    Bachelor in Computer Science
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-200">
+                    University of the People - Online Distance Education
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
           <hr className="my-3 border-t-gray-400" />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="pretty-font text-2xl md:text-3xl font-medium">
+              Certificates & Credentials
+            </h1>
+            <div className="mt-6">
+              <div className="flex item-center gap-3 mb-6">
+                <img
+                  src={Diploma}
+                  alt=""
+                  className="w-20 h-auto border border-black"
+                />
+                <div className="flex items-center justify-between gap-5 w-full">
+                  <div>
+                    <h1 className="text-base md:text-lg font-medium">
+                      Foundation Diploma in ICT
+                    </h1>
+                    <p className="text-gray-600 text-sm">
+                      JKT Digital Institute
+                    </p>
+                  </div>
+                  <a
+                    href="/FoundationDiploma.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Download />
+                  </a>
+                </div>
+              </div>
+              <div className="flex item-center gap-3 mb-6">
+                <img
+                  src={LaravelCerti}
+                  alt=""
+                  className="w-20 h-auto border border-black"
+                />
+                <div className="flex items-center justify-between gap-5 w-full">
+                  <div>
+                    <h1 className="text-base md:text-lg font-medium">
+                      PHP Deep Dive Laravel
+                    </h1>
+                    <p className="text-gray-600 text-sm">
+                      Creative Coder Myanmar
+                    </p>
+                  </div>
+                  <a
+                    href="/Laravel.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Download />
+                  </a>
+                </div>
+              </div>
+              <div className="flex item-center gap-3 mb-6">
+                <img
+                  src={PWD}
+                  alt=""
+                  className="w-20 h-auto border border-black"
+                />
+                <div className="flex items-center justify-between gap-5 w-full">
+                  <div>
+                    <h1 className="text-base md:text-lg font-medium">
+                      Professional Website Developer
+                    </h1>
+                    <p className="text-gray-600 text-sm">Fairway Technology</p>
+                  </div>
+                  <a
+                    href="/PWD.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Download />
+                  </a>
+                </div>
+              </div>
+              <div className="flex item-center gap-3 mb-6">
+                <img
+                  src={ReactCerti}
+                  alt=""
+                  className="w-20 h-auto border border-black"
+                />
+                <div className="flex items-center justify-between gap-5 w-full">
+                  <div>
+                    <h1 className="text-base md:text-lg font-medium">
+                      React + Firebase Combo Package
+                    </h1>
+                    <p className="text-gray-600 text-sm">
+                      Creative Coder Myanmar
+                    </p>
+                  </div>
+                  <a
+                    href="/React.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Download />
+                  </a>
+                </div>
+              </div>
+              <div className="flex item-center gap-3 mb-6">
+                <img
+                  src={Github}
+                  alt=""
+                  className="w-20 h-auto border border-black"
+                />
+                <div className="flex items-center justify-between gap-5 w-full">
+                  <div>
+                    <h1 className="text-base md:text-lg font-medium">
+                      Git & Github Intermediate
+                    </h1>
+                    <p className="text-gray-600 text-sm">
+                      Creative Coder Myanmar
+                    </p>
+                  </div>
+                  <a
+                    href="/Github.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Download />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </motion.div>
       <motion.div
