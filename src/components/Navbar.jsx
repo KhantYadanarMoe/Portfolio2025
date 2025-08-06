@@ -25,7 +25,13 @@ function Navbar() {
           {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
         </button>
         {/* Change link to download */}
-        <a href="resume.pdf" className="hidden md:block" download>
+        <a
+          href="/resume.pdf"
+          className="hidden md:block"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
           <button class="resume bg-none border-none font-medium px-3 py-1.5 text-base">
             Resume
           </button>

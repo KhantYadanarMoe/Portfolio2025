@@ -156,7 +156,7 @@ function About() {
                     Oct 2024 – Jan 2025
                   </span>
                   <h3 className="text-base md:text-lg font-semibold">
-                    Frontend (React) Zoom class
+                    React + Firebase Combo
                   </h3>
                   <p className="text-gray-600 dark:text-gray-200">
                     Creative Coder Myanmar – Learned how to build a website with
@@ -169,7 +169,7 @@ function About() {
                     2022 – Present
                   </span>
                   <h3 className="text-base md:text-lg font-semibold">
-                    Bachelor in English Literature
+                    Bachelor of Arts in English
                   </h3>
                   <p className="text-gray-600 dark:text-gray-200">
                     Dagon University- Distance Education
