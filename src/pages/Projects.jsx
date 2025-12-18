@@ -35,10 +35,10 @@ function Projects() {
       </motion.div>
 
       <div>
-        <div className="lg:flex items-center gap-3 my-8">
+        <div className="lg:flex flex-col lg:flex-row items-center gap-3 my-8">
           {/* Image animation from left */}
           <motion.div
-            className="lg:w-2/5"
+            className="lg:w-2/5 order-1"
             initial="hidden"
             animate="visible"
             variants={{
@@ -55,7 +55,7 @@ function Projects() {
 
           {/* Text content animation from right */}
           <motion.div
-            className="lg:w-3/5"
+            className="lg:w-3/5 order-2"
             initial="hidden"
             animate="visible"
             variants={{
@@ -157,9 +157,24 @@ function Projects() {
             </motion.div>
           </motion.div>
         </div>
-        <div className="lg:flex items-center gap-3 my-8">
+        <div className="lg:flex flex-col lg:flex-row items-center gap-3 my-8">
           <motion.div
-            className="lg:w-3/5"
+            className="lg:w-2/5 order-1 lg:order-2"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+            }}
+          >
+            <img
+              src={Project2}
+              alt="Mote Sine Project"
+              className="w-80 md:w-96 lg:w-[90%] mx-auto"
+            />
+          </motion.div>
+          <motion.div
+            className="lg:w-3/5 order-2 lg:order-1"
             initial="hidden"
             animate="visible"
             variants={{
@@ -258,22 +273,6 @@ function Projects() {
                 </a>
               </Button>
             </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="lg:w-2/5"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-            }}
-          >
-            <img
-              src={Project2}
-              alt="Mote Sine Project"
-              className="w-80 md:w-96 lg:w-[90%] mx-auto"
-            />
           </motion.div>
         </div>
       </div>
