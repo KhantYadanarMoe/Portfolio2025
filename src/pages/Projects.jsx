@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import Project from "../assets/Project.png";
+import Project2 from "../assets/Project2.png";
 import { GlobeLock } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -34,7 +35,7 @@ function Projects() {
       </motion.div>
 
       <div>
-        <div className="lg:flex items-center gap-3 my-4">
+        <div className="lg:flex items-center gap-3 my-8">
           {/* Image animation from left */}
           <motion.div
             className="lg:w-2/5"
@@ -154,6 +155,125 @@ function Projects() {
                 </a>
               </Button>
             </motion.div>
+          </motion.div>
+        </div>
+        <div className="lg:flex items-center gap-3 my-8">
+          <motion.div
+            className="lg:w-3/5"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.6, delay: 0.2 },
+              },
+            }}
+          >
+            <h1 className="pretty-font text-2xl font-bold">Burma Web Campus</h1>
+
+            <div className="flex flex-wrap py-3 gap-2">
+              {["Laravel", "React", "Javascript", "Tailwind", "Shadcn"].map(
+                (tech, i) => (
+                  <motion.span
+                    key={tech}
+                    className="px-2 py-1 text-xs rounded-md"
+                    style={{
+                      backgroundColor: [
+                        "#FF2D20",
+                        "#61DAFB",
+                        "#F7DF1E",
+                        "#38BDF8",
+                        "#1E1E2F",
+                      ][i],
+                      color: i === 2 || i === 3 ? "#000" : "#fff",
+                    }}
+                    variants={fadeUp}
+                    custom={i + 2}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    {tech}
+                  </motion.span>
+                )
+              )}
+            </div>
+
+            <motion.p
+              className="text-sm text-gray leading-relaxed"
+              variants={fadeUp}
+              custom={7}
+              initial="hidden"
+              animate="visible"
+            >
+              Burma Web Campus is a website development learning website intend
+              for teaching Website Development and sharing knowledge for it.You
+              can learn web dev courses, check progress, take final quizzes, get
+              certificates, comment on each sub-units, enroll courses, read
+              blogs, contact, leave reviews, subscribe and more. You can also
+              edit profile info, change password, check courses list you
+              enrolled, certificates you got, set default payment and check
+              billing info.
+              <br />
+              Admins can manage everything such as courses, blogs, categories,
+              purchase histories, users, subscribers, reviews, and contact
+              messages.
+              <br />
+              It’s a fully responsive, real-world learning management platform
+              with over 25 pages.
+            </motion.p>
+
+            <motion.div
+              className="flex gap-2 items-center mt-3"
+              variants={fadeUp}
+              custom={8}
+              initial="hidden"
+              animate="visible"
+            >
+              <Button
+                variant="outline"
+                className="border border-gray-700 dark:border-gray-200"
+              >
+                <a
+                  href="https://burmawebcampus.site"
+                  className="flex gap-2 items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GlobeLock /> Live Demo
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                className="border border-gray-700 dark:border-gray-200"
+              >
+                <a
+                  href="https://github.com/KhantYadanarMoe/BurmaWebCampus"
+                  className="flex gap-2 items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub /> Github
+                </a>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="lg:w-2/5"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+            }}
+          >
+            <img
+              src={Project2}
+              alt="Mote Sine Project"
+              className="w-80 md:w-96 lg:w-[90%] mx-auto"
+            />
           </motion.div>
         </div>
       </div>
