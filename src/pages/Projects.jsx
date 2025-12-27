@@ -3,7 +3,7 @@ import { Button } from "../components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import Project from "../assets/Project.png";
 import Project2 from "../assets/Project2.png";
-import { GlobeLock } from "lucide-react";
+import { GlobeLock, Video } from "lucide-react";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -257,6 +257,19 @@ function Projects() {
                   rel="noopener noreferrer"
                 >
                   <GlobeLock /> Live Demo
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                className="border border-gray-700 dark:border-gray-200"
+              >
+                <a
+                  href="https://youtu.be/BjBr1zlOBVs"
+                  className="flex gap-2 items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Video /> Demo Video
                 </a>
               </Button>
               <Button
