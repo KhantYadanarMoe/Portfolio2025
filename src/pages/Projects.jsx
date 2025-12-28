@@ -146,6 +146,19 @@ function Projects() {
                 className="border border-gray-700 dark:border-gray-200"
               >
                 <a
+                  href="https://youtu.be/7MynyDF2Hf0"
+                  className="flex gap-2 items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Video /> Demo Video
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                className="border border-gray-700 dark:border-gray-200"
+              >
+                <a
                   href="https://github.com/KhantYadanarMoe/MoteSine"
                   className="flex gap-2 items-center"
                   target="_blank"
